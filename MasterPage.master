@@ -1,0 +1,38 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage"%>
+
+<!DOCTYPE html>
+<html>
+<head runat="server">
+    <title>Blood Bank</title>
+    <asp:ContentPlaceHolder ID="head" runat="server"></asp:ContentPlaceHolder>
+    <link href="StyleSheet.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <form id="form1" runat="server">
+        
+        <!-- ✅ Fixed Header -->
+        <div class="header">
+            <div class="logo">
+                <asp:Image ID="Image1" runat="server" ImageUrl="~/blood2.jpg" />
+            </div>
+            <div class="menu">
+                <a href="Home.aspx">Home</a> |
+                <a href="About.aspx">About</a> |
+                <a href="Contact.aspx">Contact</a> |
+                <a href="Donor.aspx">Donor</a> |
+             
+                <a href="Acceptor_Register.aspx">Apply for Blood</a> |
+                
+                <a href="Admin.aspx">Details</a> |
+                <a href="Urgent.aspx">For Urgent Contact</a>
+            </div>
+        </div>
+
+        <!-- Page Content -->
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
+        </div>
+
+    </form>
+</body>
+</html>

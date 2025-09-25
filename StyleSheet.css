@@ -1,0 +1,47 @@
+﻿/* Reset */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Header container (logo + menu) */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #b30000; /* Red background */
+    padding: 10px 20px;
+    position: fixed; /* ✅ Freeze header */
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+/* Logo */
+.logo img {
+    height: 80px; /* adjust as needed */
+    width: auto;
+}
+
+/* Menu */
+.menu {
+    text-align: right;
+}
+
+    .menu a {
+        color: #fff;
+        text-decoration: none;
+        margin: 0 10px;
+        font-weight: bold;
+        transition: color 0.3s;
+    }
+
+        .menu a:hover {
+            color: yellow;
+        }
+
+/* Push down page content so it doesn’t hide under fixed header */
+form {
+    margin-top: 120px; /* adjust to match header height */
+}
